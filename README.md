@@ -12,7 +12,7 @@ O objetivo é servir como uma base de consulta técnica pessoal.
 
 ## 🛠️ Tecnologias e Ambiente
 
-* **Linguagem:** Python 3.12+
+* **Linguagem:** Python 3.14+
 * **Sistema Operacional:** NixOS (KDE plasma)
 * **Ambiente de Dev:** Container Fedora via Distrobox/Podman
 * **Editor:** VS Code / Vim (Tema Gruvbox)
