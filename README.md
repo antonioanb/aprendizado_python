@@ -12,7 +12,26 @@ O objetivo é servir como uma base de consulta técnica pessoal.
 
 ## 🛠️ Tecnologias e Ambiente
 
-* **Linguagem:** Python 3.14+
-* **Sistema Operacional:** NixOS (KDE plasma)
-* **Ambiente de Dev:** Container Fedora via Distrobox/Podman
-* **Editor:** VS Code / Vim (Tema Gruvbox)
+- **Linguagem:** Python 3.13.12 (Gerenciado via Nix)
+
+- **Sistema Operacional:** Debian GNU/Linux
+
+- **Ambiente de Desenvolvimento:** `nix-shell` (Ambiente isolado e reprodutível)
+
+- **Editor:** VS Code / Vim (Tema Gruvbox / Amber Fallout style)
+
+## 🧪 Como usar o Laboratório Python
+
+Para garantir que o ambiente de estudos seja idêntico ao meu, utilize o arquivo `shell.nix` incluso:
+
+1. Instale o [Nix Package Manager](https://nixos.org/download.html).
+
+2. Na raiz do projeto, execute:
+   
+   Bash
+   
+   ```
+   nix-shell
+   ```
+
+3. O ambiente carregará automaticamente o Python e as ferramentas necessárias sem poluir o sistema operacional.
