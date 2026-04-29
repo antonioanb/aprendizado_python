@@ -6,10 +6,10 @@ pkgs.mkShell {
     pkgs.python3
     pkgs.python3Packages.pip
     pkgs.python3Packages.virtualenv
-    # Se quiser testar o Aseprite aqui dentro no futuro, bastaria adicionar pkgs.aseprite
+    pkgs.python3Packages.pylint
   ];
 
-  # Isso aqui roda toda vez que você entrar no lab
+  # Isso aqui roda toda vez que entrar no lab
   shellHook = ''
     echo "--- Laboratório de Python Ativado ---"
     python --version
