@@ -1,0 +1,5 @@
+# Ignorar cache do Pylint
+.pylint.d/
+# caso eu gere relatórios de texto ou HTML
+pylint_report.txt
+pylint_report.html
