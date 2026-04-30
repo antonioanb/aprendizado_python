@@ -10,28 +10,62 @@ O objetivo é servir como uma base de consulta técnica pessoal.
 * **03-poo/**: Classes, Herança e Polimorfismo.
 * **04-projetos/**: Pequenas aplicações práticas.
 
-## 🛠️ Tecnologias e Ambiente
 
-- **Linguagem:** Python 3.13.12 (Gerenciado via Nix)
 
-- **Sistema Operacional:** Debian GNU/Linux
+## 🛠️ Como rodar
 
-- **Ambiente de Desenvolvimento:** `nix-shell` (Ambiente isolado e reprodutível)
+Este repositório utiliza **Nix** para garantir que o ambiente de desenvolvimento (Python 3.13 + Pylint) seja idêntico e reprodutível.
 
-- **Editor:** VS Code / Vim (Tema Gruvbox / Amber Fallout style)
+### 1. Pré-requisitos (Configuração do Sistema)
 
-## 🧪 Como usar o Laboratório Python
+Antes de escolher uma opção, certifique-se de ter o `direnv` instalado no seu sistema operacional (Debian ou WSL2) para que a automação funcione:
 
-Para garantir que o ambiente de estudos seja idêntico ao meu, utilize o arquivo `shell.nix` incluso:
+Bash
 
-1. Instale o [Nix Package Manager](https://nixos.org/download.html).
+```
+sudo apt update && sudo apt install direnv
+echo 'eval "$(direnv hook bash)"' >> ~/.bashrc
+source ~/.bashrc
+```
 
-2. Na raiz do projeto, execute:
+---
+
+### 2. Escolha sua forma de uso:
+
+#### **Opção A: Recomendada (Linux/WSL2 com Nix)**
+
+Esta opção utiliza o `shell.nix` do projeto para configurar tudo automaticamente.
+
+1. Instale o [Nix](https://nixos.org/download.html).
+
+2. Entre na pasta do projeto.
+
+3. Execute `direnv allow` (apenas na primeira vez).
+
+4. **O ambiente será carregado sozinho toda vez que você entrar na pasta.**
+
+#### **Opção B: Tradicional (Sem Nix)**
+
+Se preferir não usar o Nix, basta ter o **Python 3.10+** instalado no seu sistema:
+
+1. **Crie o ambiente virtual:**
    
    Bash
    
    ```
-   nix-shell
+   python -m venv .venv
    ```
 
-3. O ambiente carregará automaticamente o Python e as ferramentas necessárias sem poluir o sistema operacional.
+2. **Ative o ambiente:**
+   
+   - **Windows:** `.venv\Scripts\activate`
+   
+   - **Linux/macOS:** `source .venv/bin/activate`
+
+3. **(Opcional) Instale o linter:** `pip install pylint`
+
+---
+
+### 💡 Por que usar o VS Code Nativo (.deb)?
+
+Para que o **Pylint** e o **Python** do Nix funcionem perfeitamente com a extensão `direnv` no VS Code, é recomendado a instalação da versão **.deb** oficial. Versões em Sandbox (como Flatpak) podem ter dificuldades para acessar as ferramentas instaladas via Nix.
