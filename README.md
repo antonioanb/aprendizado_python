@@ -11,9 +11,8 @@ Para manter o foco e a produtividade, utilizo uma configuração otimizada para 
 *   **Shell:** Bash com integração `direnv` e `nix-shell`.
 
 ## 📂 Estrutura de Pastas
-*   **01-fundamentos/**: Variáveis, tipos de dados e conceitos de memória.
-*   **02-estruturas-de-dados/**: Listas, Dicionários, Tuplas e Sets.
-*   **03-poo/**: Classes, Herança e Polimorfismo.
+*   **01-fundamentos/**: Variáveis, funções, tipos de dados e conceitos de memória.
+*   ***02-poo/**: Classes, Herança e Polimorfismo.
 *   **04-projetos/**: Pequenas aplicações práticas.
 
 ## 🛠️ Como rodar
